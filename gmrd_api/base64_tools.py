@@ -1,5 +1,6 @@
 import base64
 
+
 class Base64Tool:
     def image_to_string(file_path):
         with open(file_path, "rb") as file:

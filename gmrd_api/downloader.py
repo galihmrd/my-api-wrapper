@@ -1,7 +1,8 @@
 import os
-from requests import Session
-from .exceptions import *
 
+from requests import Session
+
+from .exceptions import *
 
 
 class InfoParser:
@@ -58,6 +59,6 @@ class SaveFile:
                     extension = ".mp4"
                 else:
                     extension = ".jpg" if not "mp4" in url else ".mp4"
-            open(path + extension, 'wb').write(r.content)
+            open(path + extension, "wb").write(r.content)
         except Exception as e:
             raise DownloadError(f"Failed to download file {e}")
