@@ -1,6 +1,9 @@
 import os
 
-import requests
+try:
+    import requests
+except ModuleNotFoundError as e:
+    print(f"WARNING: {e}")
 
 from .base64_tools import Base64Tool
 
