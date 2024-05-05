@@ -1,4 +1,5 @@
 import os
+
 from setuptools import setup
 
 from gmrd_api import __version__
