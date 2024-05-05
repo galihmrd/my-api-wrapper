@@ -2,7 +2,6 @@ from setuptools import setup
 
 from gmrd_api import __version__
 
-
 with open("requirements.txt", encoding="utf-8") as r:
     requires = [i.strip() for i in r]
 
