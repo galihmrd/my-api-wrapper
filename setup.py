@@ -14,7 +14,7 @@ setup(
     description="multi function api",
     author="Galih Mrd",
     author_email="driveme177@gmail.com",
-    packages=["gmrd_api"],  # same as name
+    packages=[],  # same as name
     url="https://github.com/galihmrd",
     license="MIT",
     install_requires=requires,
