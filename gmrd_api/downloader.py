@@ -1,6 +1,9 @@
 import os
 
-from requests import Session
+try:
+    from requests import Session
+except ModuleNotFoundError as e:
+    print(f"WARNING: {e}")
 
 from .exceptions import *
 
