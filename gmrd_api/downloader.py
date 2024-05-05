@@ -1,4 +1,5 @@
 import os
+import secrets
 
 try:
     from requests import Session
@@ -47,7 +48,8 @@ class GetInfo(InfoParser):
 
 
 class SaveFile:
-    def __init__(self, url: str, path: str):
+    def __init__(self, url, filename=None):
+        path = filename if filename else str(secrets.token_hex(nbytes=16))
         try:
             r = Session().get(url, allow_redirects=True)
             content_type = r.headers["Content-Type"]
