@@ -2,6 +2,10 @@ from setuptools import setup
 
 from gmrd_api import __version__
 
+
+with open("requirements.txt", encoding="utf-8") as r:
+    requires = [i.strip() for i in r]
+
 setup(
     name="gmrd-api",
     version=__version__,
@@ -11,7 +15,5 @@ setup(
     packages=["gmrd_api"],  # same as name
     url="https://github.com/galihmrd",
     license="MIT",
-    install_requires=[
-        # -*- Extra requirements: -*-
-    ],
+    install_requires=requires,
 )
